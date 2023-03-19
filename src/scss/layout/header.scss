@@ -1,0 +1,148 @@
+// =====================================================================================================================
+.header {
+  width: 100%;
+  position: sticky;
+  display: block;
+  border-color: $whiteColor;
+  background-color: $whiteColor;
+  z-index: 10;
+  top: 0;
+  left: 0;
+
+		&__logo {
+      max-width: 175px;
+      @include adaptiveClamp(width, 175, 130);
+      img {
+        width: 100%;
+      }
+		}
+
+		&__menu {
+      flex: 1 1 auto;
+		}
+
+  // .header__container
+  &__container {
+    height: rem($headerHeight);
+    display: flex;
+    align-items: center;
+    @media(max-width:825px){
+        justify-content: space-between;
+    }
+  }
+}
+.menu {
+  margin-left: 20px;
+  @media(max-width:825px){
+    transition: all 1s ease  0s;
+    
+    position: fixed;
+    background-color: $whiteColor;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    margin-left: 0px;
+
+    z-index: 5;
+
+    .menu-open & {
+      right: 0;
+    }
+  }
+
+  &__list {
+    // position: relative;
+    z-index: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 19px;
+    flex-direction: row;
+    justify-content: end;
+
+    @include adaptiveClamp(column-gap, 68, 10);
+    row-gap: 15px;
+
+    @media(max-width:825px){
+        flex-direction: column;
+        row-gap: 25px;
+        text-align: center;
+        align-items: center;
+
+        margin-top: 158px;
+    }
+  }
+
+  &__item {
+    transition: all 0.5s ease  0s;
+    &:hover {
+      a {
+        color: #72B3EA;
+      }
+    }
+    @media(max-width:825px){
+      padding: 15px 5px;
+      text-align: center;
+      border-radius: 8px;
+      width: 238px;
+      font-size: 20px;
+      &:hover {
+        background-color: $backgraundColor;
+        a {
+          color: #72B3EA;
+        }
+      }
+  }
+  }
+
+  &__link {
+  }
+}
+// =====================================================================================================================
+
+// Burger
+.icon-menu {
+  display: none;
+  @include media(825) {
+    display: block;
+    background-color: $whiteColor;
+    position: relative;
+    width: rem(30);
+    height: rem(18);
+    cursor: pointer;
+    z-index: 5;
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 300ms ease 0ms;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(3);
+      background-color: #203253;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - rem(1.5));
+    }
+    .menu-open & {
+      span {
+        width: 0;
+      }
+      &::before {
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

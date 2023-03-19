@@ -1,0 +1,175 @@
+.cases {
+    margin-top: 60px;
+    &__container {
+    }
+    &__row {
+        position: relative;
+    }
+    &__header .header-two {
+        display: flex;
+        gap: 10px;
+
+        flex: 0 1 50%;
+        h2 {
+            flex: 0 1 50%;
+        }
+        p {
+            flex: 0 1 50%;
+            max-width: 620px;
+        }
+        @media(max-width:962px){
+            flex-direction: column;
+        }
+    }
+
+    &__swiper { 
+        position: relative;
+        @include adaptiveClamp(margin-top, 67, 25);
+    }
+
+    &__swiper-wrapper {
+    }
+
+    &__swiper-slide {
+    }
+
+    &__item {
+    }
+    &__btn {
+        @include adaptiveClamp(margin-top, 40, 15);
+        font-weight: 600;
+        padding: 18px 62.5px;
+        max-width: 194px;
+        text-align: center;
+
+        @media(max-width:825px){
+            padding: 12px 80px;
+            max-width: 100%;
+        }
+    }
+}
+.header {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.item-cases {
+    display: flex;
+
+    background: #F4FAFF;
+    border-radius: 24px;
+    @media(max-width:825px){
+        flex-direction: column;
+    }
+    &__body {
+        flex: 0 1 50%;
+        padding: 50px 45px 41px 36px;
+
+        @media(max-width:825px){
+            padding: 28px 20px;
+        }
+        @media(max-width:825px){
+            flex: 0 1 100%;
+        }
+    }
+
+    &__example {
+        padding: 12px 32px;
+        background: #E6F1FA;
+        border-radius: 8px;
+        text-align: center;
+
+        max-width: 176px;
+
+        font-weight: 600;
+        @include adaptiveClamp(font-size, 16, 12);
+    }
+
+    &__header {
+        @include adaptiveClamp(margin-top, 30, 15);
+        font-weight: 700;
+
+        @include adaptiveClamp(font-size, 36, 24);
+        @include adaptiveClamp(line-height, 42, 28);
+    }
+    p {
+        @include adaptiveClamp(margin-top, 30, 15);
+    }
+
+    &__calc-row {
+        @include adaptiveClamp(margin-top, 30, 15);
+        display: flex;
+        @include adaptiveClamp(gap, 60, 10);
+        
+        @media(max-width:1200px){
+            @include adaptiveClamp(gap, 20, 10);
+        }
+        @media(max-width:480px){
+            display: none;
+        }
+    }
+
+    &__calc-column {
+        p {
+            margin-top: 0;
+            @include adaptiveClamp(font-size, 16, 12);
+        }
+        @media(max-width:995px){
+            flex: 0 1 50%;
+            &:last-child {
+                display: none;
+                
+            }
+        }
+        @media(max-width:825px){
+            flex: 0 1 33.333%;
+            &:last-child {
+                display: block;
+                
+            }
+        }
+    }
+
+    &__frame {
+        margin-top: 12px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        p {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 140%;
+
+            @include adaptiveClamp(font-size, 24, 14);
+            color: $blueDarkColor;
+        }
+        &-img {
+            width: 24px;
+            height: 24px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    &__img {
+        position: relative;
+        flex: 0 1 50%;
+        // border-radius: 0px 24px 24px 0px;
+        @media(max-width:825px){
+            flex: 0 1 100%;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0px 24px 24px 0px;
+            @media(max-width:825px){
+                border-radius: 0px 0px 24px 24px;
+
+            }
+        }
+    }
+}

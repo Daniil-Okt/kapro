@@ -1,0 +1,132 @@
+.cargo {
+
+    &__container {
+        position: relative;
+    }
+
+    &__row {
+        position: relative;
+        display: flex;
+        background: #B1DDFF;
+        border-radius: 36px;
+        @media(max-width:825px){
+            flex-direction: column;
+            padding: 0px 20px;
+        }
+    }
+
+    &__body {
+        flex: 0 1 50%;
+
+        @include adaptiveClamp(margin-top, 53, 20);
+        @include adaptiveClamp(margin-bottom, 53, 20);
+        @include adaptiveClamp(margin-left, 72, 20);
+        p {
+            color: #335D93;
+        }
+        @media(max-width:825px){
+            flex: 0 1 100%;
+            margin-left: 0px;
+        }
+    }
+
+    &__header {
+        max-width: 480px;
+        @include adaptiveClamp( max-width, 480, 260);
+        @media(max-width:825px){
+            max-width: 100%;
+            // text-align: center;
+        }
+    }
+
+    &__item-row {
+        @include adaptiveClamp(margin-top, 15, 10);
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 335px;
+        // column-gap: 20px;
+        p {
+            flex: 0 1 100%;
+        }
+        @media(max-width:420px){
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        position: relative;
+        margin-top: 11px;
+        flex: 0 1 50%;
+        p {
+            margin-left: 28px;
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            background: url('../../images/cargo-icon.svg') no-repeat;
+            background-size: 100%;
+            width: 16.67px;
+            height: 16.67px;
+            left: 0;
+            bottom: 2px;
+        }
+    }
+
+    &__form {
+        @include adaptiveClamp( max-width, 480, 260);
+        @include adaptiveClamp( margin-top, 34, 20);
+        input, textarea {
+            margin-bottom: 10px;
+        }
+        input.button {
+            max-width: 100%;
+        }
+        @media(max-width:825px){
+            max-width: 100%;
+        }
+        @media(max-width:505px){
+            textarea {
+                height: 78px;
+            }
+        }
+    }
+    &__tel {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            width: 24px;
+            height: 24px;
+            background: url('../../images/cargo-tel.svg') no-repeat;
+            @include adaptiveClamp(background-size, 24, 18);
+            top: 12px;
+            right: 20px;
+        }
+    }
+
+    &__img {
+        position: relative;
+        flex: 0 1 50%;
+        padding-right: 26px;
+        @media(max-width:825px){
+            flex: 0 1 100%;
+            padding-right: 0px;
+        }
+        img {
+            // @include adaptiveClamp(margin-top, 53, 20);
+            width: 100%;
+            height: 100%;
+            max-width: 560px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            object-fit: cover;
+            border-bottom-right-radius: 36px;
+            @media(max-width:825px){
+                display: block;
+                position: relative;
+                margin: 0px auto;
+            }
+        }
+    }
+}

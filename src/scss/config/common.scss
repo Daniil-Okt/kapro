@@ -1,0 +1,87 @@
+// Заголовки, общие БЄМ блоки и проче...
+h1 {
+    font-weight: 700;
+
+    @include adaptiveClamp(font-size, 51, 26);
+    @include adaptiveClamp(line-height, 60, 31);
+}
+h2 {
+    font-weight: 700;
+
+    @include adaptiveClamp(font-size, 40, 24);
+    @include adaptiveClamp(line-height, 47, 28);
+}
+p {
+    line-height: 140%;
+    color: #335D93;
+    @include adaptiveClamp(font-size, 16, 14);
+}
+p.head {
+    line-height: 140%;
+
+    @include adaptiveClamp(font-size, 18, 14);
+}
+input, textarea {
+    width: 100%;
+    min-height: 50px;
+    height: 100%;
+    padding: 16px 20px;
+    background-color: $whiteColor;
+    border-radius: 16px;
+    // overflow: visible;
+}
+textarea {
+    display: block;
+    padding: 16px 20px 4px 20px;
+    overflow: hidden;
+    height: auto;
+}
+input, textarea, input::placeholder, textarea::placeholder {
+    color: #929DAF;
+    font-weight: 500;
+    font-size: 16px;
+    @include adaptiveClamp(font-size, 16, 14);
+    // overflow: visible;
+}
+input, textarea {
+    color: $blueDarkColor;
+}
+.button {
+    background-color: $blueDarkColor;
+    color: $whiteColor;
+    text-align: center;
+    overflow: visible;
+    line-height: none;
+    cursor: pointer;
+
+    border-radius: 16px;
+
+    @include adaptiveClamp(font-size, 16, 14);
+
+    padding: 18px 30px;
+    max-width: 194px;
+
+        @media(max-width:825px){
+            padding: 12px 30px;
+            max-width: 100%;
+        }
+}
+
+
+.header-two {
+    display: flex;
+    gap: 10px;
+
+    flex: 0 1 50%;
+    h2 {
+        flex: 0 1 50%;
+    }
+    p {
+        flex: 0 1 50%;
+        max-width: 620px;
+    }
+    @media(max-width:962px){
+        flex-direction: column;
+    }
+}
+
