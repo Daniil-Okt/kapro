@@ -164,7 +164,7 @@ const swiperOption = new Swiper('.option__swiper', {
   slidesPerView: 1,
   modules: [Autoplay],
   autoplay: {
-    delay: 2000,
+    delay: 5000,
     stopOnLastSlide: false,
     disableOnIteration: false,
   },
