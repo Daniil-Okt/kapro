@@ -31,11 +31,11 @@
     }
 
     &__header {
-        h1 {
-            max-width: 480px;
-        }
         width: 100%;
-        @include adaptiveClamp( max-width, 480, 260);
+        h1 {
+            @include adaptiveClamp( max-width, 480, 260);
+        }
+        
     }
 
     &__item-row {
@@ -72,8 +72,8 @@
     }
 
     &__form {
-        @include adaptiveClamp( max-width, 480, 260);
-        @include adaptiveClamp( margin-top, 34, 20);
+        @include adaptiveClamp(max-width, 480, 260);
+        @include adaptiveClamp(margin-top, 34, 20);
         input, textarea {
             margin-bottom: 10px;
         }
