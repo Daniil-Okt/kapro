@@ -77,7 +77,7 @@
         padding: 0px;
         @include adaptiveClamp(margin-top, 60, 22);
     }
-    input {
+    input, textarea {
         height: 64px;
         transition: all 0.3s ease  0s;
         border: 2px solid transparent;
@@ -89,6 +89,7 @@
             color: #72B3EA;
             &::placeholder {
                 color: #72B3EA;
+                
             }
         }
     }
@@ -105,8 +106,9 @@
     }
 
     &__button {
-        input:hover {
-            background: #72B3EA;
+        input.button:hover {
+            background-color: #72B3EA;
+            color: $whiteColor;
         }
     }
     p {
