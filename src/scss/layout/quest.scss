@@ -1,0 +1,90 @@
+.quest {
+    @include adaptiveClamp(margin-top, 74, 20);
+
+    &__container {
+    }
+
+    &__row-spollers {
+        @include adaptiveClamp(margin-top, 52, 40);
+        padding: 90px 45px;
+        @media(max-width:825px){
+            padding: 45px 20px;
+        }
+        display: flex;
+        flex-direction: column;
+
+        background: #F4FAFF;
+        border-radius: 24px;
+    }
+
+    &__header {
+    }
+}
+.header-two {
+}
+.head {
+}
+.spollers {
+
+    &__item {
+        // display: flex;
+        // flex-direction: column
+    }
+
+    &__header {
+        position: relative;
+        width: 100%;
+        @include adaptiveClamp(height, 98, 80);
+        font-weight: 700;
+        @include adaptiveClamp(font-size, 32, 20);
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        transition: all 0.5s ease  0s;
+
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            width: 20px;
+            height: 4px;
+            cursor: pointer;
+            background-color: $blackColor;
+            // border-bottom-left-radius: 25%;
+            
+            transition: all 0.3s ease  0s;
+        }
+        &::before {
+            transform: rotate(45deg);
+            right: 12px;
+        }
+        &::after {
+            transform: rotate(-45deg);
+            right: 0;
+        }
+        .active & {
+            background: radial-gradient(39.29% 9701.17% at 50% 50%, rgba(235, 240, 244, 0.5) 0%, rgba(217, 217, 217, 0) 100%);
+            &::before {
+                transform: rotate(-45deg);
+            }
+            &::after {
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    &__body {
+        transition: all 0.3s ease  0s;
+        max-height: 0px;
+        height: 100%;
+        overflow: hidden;
+        .active & {
+            @include adaptiveClamp(margin-top, 60, 30);
+            padding: 10px 0px;
+            max-height: 150px;
+            overflow:visible;
+        }
+    }
+}

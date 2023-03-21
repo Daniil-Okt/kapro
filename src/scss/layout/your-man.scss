@@ -1,5 +1,5 @@
 .your-man {
-
+    @include adaptiveClamp(margin-top, 74, 20);
     &__container {
     }
 

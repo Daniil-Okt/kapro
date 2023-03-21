@@ -104,13 +104,13 @@ useDynamicAdapt()
 //     }
 //   })
 // }
-var textarea = document.querySelector('textarea');
+// var textarea = document.querySelector('textarea');
 
-textarea.addEventListener('keyup', function(){
-  if(this.scrollTop > 0){
-    this.style.height = this.scrollHeight + "px";
-  }
-});
+// textarea.addEventListener('keyup', function(){
+//   if(this.scrollTop > 0){
+//     this.style.height = this.scrollHeight + "px";
+//   }
+// });
 
 const swiperAdvant = new Swiper('.advant__swiper', {
   speed: 400,
@@ -210,3 +210,14 @@ const swiperReviews = new Swiper('.reviews__swiper', {
   },
   },
 });
+
+
+//Модуль спойлера
+let spollersButtonAll = document.querySelectorAll(".spollers__header")
+if(spollersButtonAll.length > 0) {
+    spollersButtonAll.forEach((button) => {
+      button.addEventListener('click',  (e) => {
+      button.closest(".spollers__item").classList.toggle("active")
+    })
+  })
+}
