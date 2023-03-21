@@ -31,12 +31,11 @@
     }
 
     &__header {
-        max-width: 480px;
-        @include adaptiveClamp( max-width, 480, 260);
-        @media(max-width:825px){
-            max-width: 100%;
-            // text-align: center;
+        h1 {
+            max-width: 480px;
         }
+        width: 100%;
+        @include adaptiveClamp( max-width, 480, 260);
     }
 
     &__item-row {
