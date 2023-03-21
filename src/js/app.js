@@ -151,8 +151,9 @@ const swiperCases = new Swiper('.cases__swiper', {
   spaceBetween: 20,
   slidesPerView: 1,
   slideToClickedSlide: true,
+  modules: [Autoplay],
   autoplay: {
-    delay: 1000,
+    delay: 2000,
     stopOnLastSlide: false,
     disableOnIteration: false,
   },
@@ -161,8 +162,9 @@ const swiperOption = new Swiper('.option__swiper', {
   speed: 400,
   spaceBetween: 20,
   slidesPerView: 1,
+  modules: [Autoplay],
   autoplay: {
-    delay: 1000,
+    delay: 2000,
     stopOnLastSlide: false,
     disableOnIteration: false,
   },
@@ -194,8 +196,9 @@ const swiperReviews = new Swiper('.reviews__swiper', {
   speed: 400,
   spaceBetween: 20,
   slidesPerView: 1,
+  modules: [Autoplay],
   autoplay: {
-    delay: 1000,
+    delay: 2000,
     stopOnLastSlide: false,
     disableOnIteration: false,
   },
