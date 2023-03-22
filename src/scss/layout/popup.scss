@@ -93,6 +93,11 @@
             }
         }
     }
+    textarea {
+        @media(max-width:538px){
+            min-height: 68px;
+        }
+    }
     &__name {
     }
 
