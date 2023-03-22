@@ -118,7 +118,7 @@ const swiperAdvant = new Swiper('.advant__swiper', {
   slidesPerView: 1,
   modules: [Autoplay],
   autoplay: {
-    delay: 2000,
+    delay: 4000,
     stopOnLastSlide: false,
     disableOnIteration: false,
   },
@@ -147,13 +147,13 @@ const swiperAdvant = new Swiper('.advant__swiper', {
   },
 });
 const swiperCases = new Swiper('.cases__swiper', {
-  speed: 400,
+  speed: 600,
   spaceBetween: 20,
   slidesPerView: 1,
   slideToClickedSlide: true,
   modules: [Autoplay],
   autoplay: {
-    delay: 2000,
+    delay: 5000,
     stopOnLastSlide: false,
     disableOnIteration: false,
   },
@@ -198,7 +198,7 @@ const swiperReviews = new Swiper('.reviews__swiper', {
   slidesPerView: 1,
   modules: [Autoplay],
   autoplay: {
-    delay: 2000,
+    delay: 4000,
     stopOnLastSlide: false,
     disableOnIteration: false,
   },
