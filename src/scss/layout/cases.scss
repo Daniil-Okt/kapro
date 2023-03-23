@@ -95,6 +95,7 @@
     }
     p {
         @include adaptiveClamp(margin-top, 30, 15);
+        background: none;
     }
 
     &__calc-row {
@@ -141,6 +142,7 @@
             font-weight: 600;
             font-size: 24px;
             line-height: 140%;
+            margin-top: 0px;
 
             @include adaptiveClamp(font-size, 24, 14);
             color: $blueDarkColor;
