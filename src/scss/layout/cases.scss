@@ -93,7 +93,7 @@
         @include adaptiveClamp(font-size, 36, 24);
         @include adaptiveClamp(line-height, 42, 28);
     }
-    p {
+    p.header {
         @include adaptiveClamp(margin-top, 30, 15);
         background: none;
     }
